@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "type": "yesno",
+      "level": 1,
+      "question": "Kya aap Annual Dinner mein shamil honay walay hain?",
+      "answer": "Yes",
+      "funFact": "Fun Fact: Yeh shaam dosto ke saath yaadon bhari hogi, is liye isko miss mat karna!"
+    },
+    {
+      "id": 2,
+      "type": "yesno",
+      "level": 1,
+      "question": "Kya aap ek shaandar aur yaadon bhari raat enjoy karna chahtay hain?",
+      "answer": "Yes",
+      "funFact": "Fun Fact: Yeh sirf ek dinner nahi, balki ek IT students ki grand party hai!"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "level": 2,
+      "question": "Aap Annual Dinner mein sab se zyada kis cheez ka intezar kar rahe hain?",
+      "options": ["Live Music", "Delicious Food", "Fun Games", "Networking"],
+      "answer": "Delicious Food",
+      "funFact": "Fun Fact: Annual Dinner sirf ek meal nahi, balki ek experience hai jo aap hamesha yaad rakhein ge!"
+    },
+    {
+      "id": 4,
+      "type": "yesno",
+      "level": 2,
+      "question": "Kya aap apni IT life se ek chhoti break lena chahtay hain aur masti karna chahtay hain?",
+      "answer": "Yes",
+      "funFact": "Fun Fact: Kabhi kabhi code ki duniya se nikal kar real duniya mein enjoy karna bhi zaroori hota hai!"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "level": 3,
+      "question": "Agar aap ek game khel sakain Annual Dinner pe, to woh konsi hogi?",
+      "options": ["Trivia Quiz", "Musical Chairs", "Dance Battle", "IT Meme Contest"],
+      "answer": "IT Meme Contest",
+      "funFact": "Fun Fact: IT students ki creativity coding tak nahi rukti, memes aur games mein bhi full fun!"
+    },
+    {
+      "id": 6,
+      "type": "input",
+      "level": 4,
+      "question": "Are you participating in any event in the Annual Dinner? If yes, please specify which one! And also share your Excitement",
+      "answer": "",
+      "funFact": "Great to know you are excited for the events!"
+    }
+  ]
+  
