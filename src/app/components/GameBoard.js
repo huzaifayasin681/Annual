@@ -169,24 +169,24 @@ const GameBoard = () => {
         transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "loop" }}
       />
 
-      <div className="relative max-w-xl mx-auto w-full p-4 z-10">
-        <div className="bg-white p-8 rounded-lg shadow-2xl relative overflow-hidden">
+      <div className="relative max-w-xl mx-auto w-full p-2 sm:p-4 z-10">
+        <div className="bg-white p-2 sm:p-8 rounded-lg shadow-2xl relative overflow-hidden">
           {/* Header: Level & Score with subtle floating animation */}
           {!gameOver && (
             <motion.div
-              className="mb-4 flex justify-between"
+              className="mb-2 sm:mb-4 flex justify-between"
               initial={{ y: -10 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
             >
               <motion.span
-                className="font-semibold text-lg"
+                className="font-semibold text-base sm:text-lg"
                 whileHover={{ scale: 1.05, textShadow: "0px 0px 8px rgba(59,130,246,0.8)" }}
               >
                 Level {currentQuestion.level}
               </motion.span>
               <motion.span
-                className="font-semibold text-lg"
+                className="font-semibold text-base sm:text-lg"
                 whileHover={{ scale: 1.05, textShadow: "0px 0px 8px rgba(16,185,129,0.8)" }}
               >
                 Score: {score}
@@ -196,7 +196,7 @@ const GameBoard = () => {
 
           {/* Timeline / Progress Bar */}
           {!gameOver && (
-            <div className="mb-6">
+            <div className="mb-4">
               <p className="text-sm font-medium text-gray-600 mb-1">
                 Question {currentIndex + 1} of {questionsData.length}
               </p>
@@ -228,7 +228,7 @@ const GameBoard = () => {
               </p>
 
               {/* Thanks Message from Devneloper Team */}
-              <div className="p-6 bg-indigo-100 rounded-lg shadow-md inline-block">
+              <div className="p-4 sm:p-6 bg-indigo-100 rounded-lg shadow-md inline-block">
                 <p className="text-xl font-semibold text-indigo-700">
                   Thank you for playing!
                 </p>
@@ -259,7 +259,7 @@ const GameBoard = () => {
                 >
                   {/* Highlight if last question is input */}
                   {isLastQuestionInput ? (
-                    <div className="p-4 border-4 border-dashed border-indigo-500 rounded-lg bg-indigo-50 transition-all">
+                    <div className="p-2 sm:p-4 border-4 border-dashed border-indigo-500 rounded-lg bg-indigo-50 transition-all">
                       <QuestionCard
                         question={currentQuestion}
                         onAnswer={handleAnswer}
@@ -299,7 +299,7 @@ const GameBoard = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-center p-6">
+                <div className="text-center p-4 sm:p-6">
                   <p className="text-2xl text-white font-bold mb-4">
                     {currentQuestion.funFact}
                   </p>
@@ -317,7 +317,7 @@ const GameBoard = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-center p-6">
+                <div className="text-center p-4 sm:p-6">
                   <p className="text-2xl text-red-500 font-bold mb-4">
                     {feedback}
                   </p>
