@@ -57,18 +57,18 @@ const QuestionCard = ({ question, onAnswer }) => {
   const renderOptions = () => {
     if (question.type === 'yesno') {
       return (
-        <div className="flex justify-around mt-6">
+        <div className="flex flex-col sm:flex-row justify-around mt-6 gap-4">
           <motion.button 
             onClick={() => triggerAnswer("yes")}
             whileHover={{ scale: 1.1 }}
-            className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-full transition duration-300 shadow-lg"
+            className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-full transition duration-300 shadow-lg"
           >
             Yes
           </motion.button>
           <motion.button 
             onClick={() => triggerAnswer("no")}
             whileHover={{ scale: 1.1 }}
-            className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white py-3 px-8 rounded-full transition duration-300 shadow-lg"
+            className="flex items-center justify-center bg-red-500 hover:bg-red-600 text-white py-3 px-8 rounded-full transition duration-300 shadow-lg"
           >
             No
           </motion.button>
@@ -112,23 +112,23 @@ const QuestionCard = ({ question, onAnswer }) => {
   };
 
   return (
-    <div className="relative flex justify-center items-center my-10">
+    <div className="relative flex flex-col justify-center items-center my-10 px-4 sm:px-0">
       {/* Floating Animated Shapes */}
       <motion.div
-        className="absolute w-24 h-24 bg-purple-500 rounded-full opacity-20"
+        className="absolute w-20 sm:w-24 h-20 sm:h-24 bg-purple-500 rounded-full opacity-20"
         animate={{ x: [0, 30, 0], y: [0, 30, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         style={{ top: "-15%", left: "-15%" }}
       />
       <motion.div
-        className="absolute w-28 h-28 bg-blue-500 rounded-full opacity-20"
+        className="absolute w-24 sm:w-28 h-24 sm:h-28 bg-blue-500 rounded-full opacity-20"
         animate={{ x: [0, -30, 0], y: [0, -30, 0] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         style={{ bottom: "-15%", right: "-15%" }}
       />
 
       <motion.div
-        className="p-10 rounded-3xl shadow-2xl bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 text-white max-w-lg w-full z-10 relative overflow-hidden"
+        className="p-6 sm:p-10 rounded-3xl shadow-2xl bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 text-white max-w-full sm:max-w-lg w-full z-10 relative overflow-hidden"
         initial={{ opacity: 0, y: 40, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         whileHover={{ rotate: 1, scale: 1.02 }}
@@ -139,10 +139,10 @@ const QuestionCard = ({ question, onAnswer }) => {
         
         {/* Header with Level and Icon */}
         <div className="flex items-center justify-between mb-6">
-          <span className="text-xl font-bold">Level {question.level}</span>
+          <span className="text-lg sm:text-xl font-bold">Level {question.level}</span>
           <motion.svg
             whileHover={{ rotate: 360 }}
-            className="w-10 h-10 text-yellow-400"
+            className="w-8 h-8 sm:w-10 sm:h-10 text-yellow-400"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -152,7 +152,7 @@ const QuestionCard = ({ question, onAnswer }) => {
         
         {/* Question Text */}
         <motion.p
-          className="text-3xl font-semibold text-center mb-6"
+          className="text-2xl sm:text-3xl font-semibold text-center mb-6"
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
@@ -168,7 +168,7 @@ const QuestionCard = ({ question, onAnswer }) => {
           transition={{ duration: 1, delay: 0.4 }}
         >
           <motion.p 
-            className="text-2xl font-bold text-yellow-300"
+            className="text-xl sm:text-2xl font-bold text-yellow-300"
             animate={{ y: [0, -5, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
           >
